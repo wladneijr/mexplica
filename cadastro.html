@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netinho | Bem-vindo</title>
+    <link rel="stylesheet" href="style_cadastro.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+    <header>
+        <nav id="cadastro-nav">
+            
+            <ul id="lista" type="none">
+                <li><a href="#">Colabore</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+
+            <input type="button" value="acessar conta" id="acessarContaBtn">
+        </nav>
+    </header>
+
+    <main id="cadastro-main">
+        <div class="cadastro-content">
+            
+            <a href="landing_page.html">
+                <button id="back-button">
+                    VOLTAR
+                </button>
+            </a>
+
+
+            <h1 class="cadastro-title">Bem-vindo!</h1>
+            <p class="cadastro-subtitle">Crie uma conta ou entre para poder fazer parte da comunidade.</p>
+
+            <div id="signup-options">
+                <button class="option-button primary-option">Continuar com email</button>
+                <button class="option-button secondary-option">Continuar com número de telefone</button>
+            </div>
+
+            <form id="email-form">
+                <input 
+                type="email" 
+                placeholder="Insira seu email" 
+                aria-label="Insira seu email" 
+                required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                title="Por favor, insira um endereço de e-mail válido (ex: nome@exemplo.com)" >
+            <a href="index.html"><button type="submit" class="continue-button">Continuar</button></a>
+                <p class="form-error-message">Estou com problemas para continuar</p>
+            </form>
+
+        </div>
+    </main>
+    
+    </body>
+</html>

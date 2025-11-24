@@ -1,0 +1,234 @@
+:root {
+    --cor-principal: #5F50F8; 
+    --cor-secundaria: #fff;
+    --cor-texto-principal: #1d1d1d;
+    --cor-texto-secundario: #6a6a6a;
+    --cor-suporte: #FFC107;
+    --cor-btn-azul: #2196F3; 
+    --cor-btn-roxo: #9370DB; 
+    --cor-btn-verde: #4CAF50;
+    --cor-btn-vermelho: #f04848;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-secundaria);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#cadastro-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    height: 70px;
+}
+
+#cadastro-nav #logo-container {
+    /* Alinha o logo à esquerda */
+    margin-right: auto;
+}
+
+#cadastro-nav #lista {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+#cadastro-nav #lista li a {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#acessarContaBtn {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto-principal);
+    border: 1px solid var(--cor-texto-principal); 
+    border-radius: 5px; 
+    height: 35px;
+    width: 150px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    transition: background-color 0.3s;
+}
+
+#acessarContaBtn:hover {
+    background-color: #f0f0f0;
+}
+
+
+#cadastro-main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 50px 20px;
+}
+
+.cadastro-content {
+    width: 100%;
+    max-width: 550px; 
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+#back-button {
+    background-color: var(--cor-btn-roxo); 
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#main-icon.small-icon {
+    font-size: 50px;
+    color: var(--cor-btn-roxo); /* Roxo claro */
+    margin-bottom: 20px;
+}
+
+.cadastro-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cadastro-subtitle {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 40px;
+}
+
+#signup-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.option-button {
+    flex: 1;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-option {
+    background-color: var(--cor-btn-roxo);
+    color: white;
+    border: none;
+}
+
+.secondary-option {
+    background-color: white;
+    color: var(--cor-texto-secundario);
+    border: 1px solid #ccc;
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#email-form input[type="email"] {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px; 
+    font-size: 1rem;
+    text-align: left;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#email-form input[type="email"]:focus {
+    border-color: var(--cor-principal);
+}
+
+.continue-button {
+    width: 100%;
+    max-width: 400px; 
+    padding: 15px 0;
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.continue-button:hover {
+    background-color: #4a38e8;
+}
+
+.form-error-message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--cor-btn-vermelho); 
+    cursor: pointer;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    #cadastro-main {
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+    .cadastro-content {
+        padding: 0 10px;
+    }
+    #signup-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .option-button {
+        width: 100%;
+    }
+    /* Move o botão voltar para dentro do fluxo do documento e alinha à esquerda */
+    #back-button {
+        position: static;
+        margin-bottom: 30px;
+    }
+}
